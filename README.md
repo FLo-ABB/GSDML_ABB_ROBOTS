@@ -10,3 +10,7 @@ Every GSDML are in Robotware, you can find them in your computer :
 
 Or in the robot controller :
 `System_Name/hd0a/System_Name/PRODUCTS/RobotWare_6.XX.XXXX/utility/service/GSDML`
+
+To download the gsml file you want, open it in github, right click on "Raw", save link as...
+
+![image explaining how to download a gsdml file on githun](https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/blob/main/img/toDownloadGSDMLFile.PNG "How to download GSDML File on GitHub")

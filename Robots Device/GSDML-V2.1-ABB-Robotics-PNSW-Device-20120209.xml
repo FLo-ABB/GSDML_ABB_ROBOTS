@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\XSD\GSDML-DeviceProfile-v2.1.xsd">
+  <ProfileHeader>
+    <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+    <ProfileRevision>1.00</ProfileRevision>
+    <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+    <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>4</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>GSDML</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity DeviceID="0x0001" VendorID="0x0174">
+      <InfoText TextId="IRC5 Robot" />
+      <VendorName Value="ABB Robotics IRC5" />
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Family MainFamily="I/O" ProductFamily="IRC5 PNIO-Device" />
+    </DeviceFunction>
+    <ApplicationProcess>
+      <DeviceAccessPointList>
+        <DeviceAccessPointItem ID="DIM 1" FixedInSlots="0" PhysicalSlots="0..2" MinDeviceInterval="128" ModuleIdentNumber="0x00000300" DNS_CompatibleName="IRC5-PNIO-Device" ImplementationType="SOFTWARE" ObjectUUID_LocalIndex="1" AddressAssignment="DCP;LOCAL">
+          <ModuleInfo>
+            <Name TextId="PNIO-DEVICE" />
+            <InfoText TextId="IRC5 Robot" />
+            <VendorName Value="ABB Robotics IRC5" />
+            <OrderNumber Value="0" />
+            <HardwareRelease Value="1" />
+            <SoftwareRelease Value="1" />
+          </ModuleInfo>
+		  <SubslotList>
+			<SubslotItem SubslotNumber="32768" TextId="TOK_Subslot_8000" /> 
+			<SubslotItem SubslotNumber="32769" TextId="TOK_Subslot_8001" /> 
+		  </SubslotList>
+          <IOConfigData MaxInputLength="1440" MaxOutputLength="1440" />
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="2" AllowedInSlots="2" />
+            <ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2" />
+            <ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2" />
+            <ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2" />
+			<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1" />
+			<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2" />
+          </UseableModules>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="DIM 1" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1" />
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+            <SystemDefinedSubmoduleList>
+                <InterfaceSubmoduleItem SubslotNumber="32768" SubmoduleIdentNumber="0x00000001" TextId="Interface1" SupportedRT_Classes="RT_CLASS_1" IsochroneModeSupported="false" SupportedProtocols="LLDP" SupportedMibs="">
+                    <ApplicationRelations AlarmCR_BlockVersion="1" AR_BlockVersion="1" IOCR_BlockVersion="1" SubmoduleDataBlockVersion="1" NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+                        <TimingProperties SendClock="32" ReductionRatio="8 16 32 64 128 256 512"/>
+                    </ApplicationRelations>
+                </InterfaceSubmoduleItem>
+                <PortSubmoduleItem SubslotNumber="32769" SubmoduleIdentNumber="0x00000001" TextId="Port1" MAUTypes="16"/>
+            </SystemDefinedSubmoduleList>
+          <Graphics>
+            <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1" />
+          </Graphics>
+        </DeviceAccessPointItem>
+      </DeviceAccessPointList>
+      <ModuleList>
+		  <ModuleItem ID="9" ModuleIdentNumber="0x00000009">
+			  <ModuleInfo>
+				  <Name TextId="DI 128 bytes" />
+				  <InfoText TextId="DI 128 bytes" />
+			  </ModuleInfo>
+			  <VirtualSubmoduleList>
+				  <VirtualSubmoduleItem ID="9" SubmoduleIdentNumber="0x00000001">
+					  <IOData IOCS_Length="1" IOPS_Length="1">
+						  <Input>
+							  <DataItem TextId="I 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 16" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 17" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 18" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 19" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 20" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 21" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 22" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 23" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 24" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 25" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 26" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 27" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 28" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 29" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 30" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 31" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 32" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 33" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 34" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 35" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 36" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 37" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 38" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 39" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 40" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 41" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 42" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 43" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 44" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 45" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 46" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 47" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 48" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 49" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 50" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 51" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 52" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 53" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 54" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 55" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 56" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 57" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 58" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 59" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 60" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 61" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 62" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 63" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 64" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 65" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 66" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 67" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 68" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 69" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 70" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 71" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 72" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 73" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 74" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 75" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 76" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 77" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 78" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 79" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 80" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 81" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 82" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 83" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 84" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 85" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 86" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 87" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 88" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 89" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 90" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 91" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 92" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 93" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 94" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 95" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 96" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 97" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 98" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 99" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 100" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 101" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 102" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 103" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 104" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 105" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 106" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 107" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 108" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 109" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 110" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 111" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 112" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 113" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 114" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 115" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 116" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 117" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 118" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 119" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 120" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 121" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 122" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 123" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 124" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 125" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 126" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="I 127" DataType="Unsigned8" UseAsBits="true"></DataItem>
+						  </Input>
+					  </IOData>
+				  </VirtualSubmoduleItem>
+			  </VirtualSubmoduleList>
+		  </ModuleItem>
+		  <ModuleItem ID="10" ModuleIdentNumber="0x0000000A">
+			  <ModuleInfo>
+				  <Name TextId="DO 128 bytes" />
+				  <InfoText TextId="DO 128 bytes" />
+			  </ModuleInfo>
+			  <VirtualSubmoduleList>
+				  <VirtualSubmoduleItem ID="10" SubmoduleIdentNumber="0x00000001">
+					  <IOData IOCS_Length="1" IOPS_Length="1">
+						  <Output>
+							  <DataItem TextId="O 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 16" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 17" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 18" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 19" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 20" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 21" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 22" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 23" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 24" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 25" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 26" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 27" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 28" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 29" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 30" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 31" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 32" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 33" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 34" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 35" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 36" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 37" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 38" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 39" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 40" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 41" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 42" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 43" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 44" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 45" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 46" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 47" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 48" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 49" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 50" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 51" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 52" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 53" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 54" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 55" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 56" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 57" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 58" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 59" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 60" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 61" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 62" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 63" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 64" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 65" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 66" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 67" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 68" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 69" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 70" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 71" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 72" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 73" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 74" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 75" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 76" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 77" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 78" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 79" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 80" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 81" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 82" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 83" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 84" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 85" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 86" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 87" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 88" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 89" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 90" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 91" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 92" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 93" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 94" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 95" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 96" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 97" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 98" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 99" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 100" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 101" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 102" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 103" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 104" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 105" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 106" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 107" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 108" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 109" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 110" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 111" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 112" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 113" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 114" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 115" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 116" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 117" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 118" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 119" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 120" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 121" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 122" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 123" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 124" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 125" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 126" DataType="Unsigned8" UseAsBits="true"></DataItem>
+							  <DataItem TextId="O 127" DataType="Unsigned8" UseAsBits="true"></DataItem>
+						  </Output>
+					  </IOData>
+				  </VirtualSubmoduleItem>
+			  </VirtualSubmoduleList>
+		  </ModuleItem>
+        <ModuleItem ID="1" ModuleIdentNumber="0x00000001">
+          <ModuleInfo>
+            <Name TextId="DI 64 bytes" />
+            <InfoText TextId="DI 64 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem TextId="I 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 16" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 17" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 18" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 19" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 20" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 21" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 22" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 23" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 24" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 25" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 26" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 27" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 28" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 29" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 30" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 31" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 32" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 33" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 34" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 35" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 36" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 37" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 38" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 39" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 40" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 41" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 42" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 43" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 44" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 45" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 46" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 47" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 48" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 49" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 50" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 51" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 52" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 53" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 54" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 55" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 56" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 57" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 58" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 59" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 60" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 61" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 62" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 63" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Input>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="2" ModuleIdentNumber="0x00000002">
+          <ModuleInfo>
+            <Name TextId="DO 64 bytes" />
+            <InfoText TextId="DO 64 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem TextId="O 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 16" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 17" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 18" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 19" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 20" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 21" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 22" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 23" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 24" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 25" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 26" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 27" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 28" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 29" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 30" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 31" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 32" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 33" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 34" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 35" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 36" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 37" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 38" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 39" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 40" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 41" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 42" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 43" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 44" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 45" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 46" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 47" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 48" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 49" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 50" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 51" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 52" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 53" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 54" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 55" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 56" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 57" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 58" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 59" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 60" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 61" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 62" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 63" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Output>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+	<ModuleItem ID="3" ModuleIdentNumber="0x00000003">
+          <ModuleInfo>
+            <Name TextId="DI 32 bytes" />
+            <InfoText TextId="DI 32 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem TextId="I 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 16" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 17" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 18" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 19" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 20" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 21" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 22" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 23" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 24" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 25" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 26" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 27" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 28" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 29" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 30" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 31" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Input>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+     <ModuleItem ID="4" ModuleIdentNumber="0x00000004">
+          <ModuleInfo>
+            <Name TextId="DO 32 bytes" />
+            <InfoText TextId="DO 32 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem TextId="O 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 16" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 17" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 18" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 19" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 20" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 21" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 22" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 23" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 24" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 25" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 26" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 27" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 28" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 29" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 30" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 31" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Output>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+	<ModuleItem ID="5" ModuleIdentNumber="0x00000005">
+          <ModuleInfo>
+            <Name TextId="DI 16 bytes" />
+            <InfoText TextId="DI 16 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem TextId="I 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Input>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+    <ModuleItem ID="6" ModuleIdentNumber="0x00000006">
+          <ModuleInfo>
+            <Name TextId="DO 16 bytes" />
+            <InfoText TextId="DO 16 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem TextId="O 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 8" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 9" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 10" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 11" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 12" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 13" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 14" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 15" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Output>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="7" ModuleIdentNumber="0x00000007">
+          <ModuleInfo>
+            <Name TextId="DI 8 bytes" />
+            <InfoText TextId="DI 8 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="7" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem TextId="I 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="I 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Input>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+    <ModuleItem ID="8" ModuleIdentNumber="0x00000008">
+          <ModuleInfo>
+            <Name TextId="DO 8 bytes" />
+            <InfoText TextId="DO 8 bytes" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="8" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem TextId="O 0" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 1" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 2" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 3" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 4" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 5" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 6" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                  <DataItem TextId="O 7" DataType="Unsigned8" UseAsBits="true"></DataItem>
+                </Output>
+              </IOData>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+      </ModuleList>
+      <GraphicsList>
+        <GraphicItem ID="1" GraphicFile="irc5device" />
+      </GraphicsList>
+      <ExternalTextList>
+        <PrimaryLanguage>
+          <Text TextId="TOK_Subslot_8000" Value="X1" /> 
+          <Text TextId="TOK_Subslot_8001" Value="X1 P1" /> 
+          <Text TextId="IRC5 Robot" Value="IRC5 Robot controller internal PROFINET IO device." />
+          <Text TextId="PNIO-DEVICE" Value="IRC5 PNIO-Device" />
+          <Text TextId="Interface1" Value="Interface1"/>
+          <Text TextId="Port1" Value="Port1"/>
+          <Text TextId="DI 128 bytes" Value="DI 128 bytes"/>
+          <Text TextId="DO 128 bytes" Value="DO 128 bytes"/>
+		  <Text TextId="DI 64 bytes" Value="DI 64 bytes"/>
+		  <Text TextId="DO 64 bytes" Value="DO 64 bytes"/>
+          <Text TextId="DI 32 bytes" Value="DI 32 bytes"/>
+          <Text TextId="DO 32 bytes" Value="DO 32 bytes"/>
+          <Text TextId="DI 16 bytes" Value="DI 16 bytes"/>
+          <Text TextId="DO 16 bytes" Value="DO 16 bytes"/>
+          <Text TextId="DI 8 bytes" Value="DI 8 bytes"/>
+          <Text TextId="DO 8 bytes" Value="DO 8 bytes"/>
+          <Text TextId="I 0" Value="Input 0"/>
+          <Text TextId="I 1" Value="Input 1"/>
+          <Text TextId="I 2" Value="Input 2"/>
+          <Text TextId="I 3" Value="Input 3"/>
+          <Text TextId="I 4" Value="Input 4"/>
+          <Text TextId="I 5" Value="Input 5"/>
+          <Text TextId="I 6" Value="Input 6"/>
+          <Text TextId="I 7" Value="Input 7"/>
+          <Text TextId="I 8" Value="Input 18"/>
+          <Text TextId="I 9" Value="Input 19"/>
+          <Text TextId="I 10" Value="Input 10"/>
+          <Text TextId="I 11" Value="Input 11"/>
+          <Text TextId="I 12" Value="Input 12"/>
+          <Text TextId="I 13" Value="Input 13"/>
+          <Text TextId="I 14" Value="Input 14"/>
+          <Text TextId="I 15" Value="Input 15"/>
+          <Text TextId="I 16" Value="Input 16"/>
+          <Text TextId="I 17" Value="Input 17"/>
+          <Text TextId="I 18" Value="Input 18"/>
+          <Text TextId="I 19" Value="Input 19"/>
+          <Text TextId="I 20" Value="Input 20"/>
+          <Text TextId="I 21" Value="Input 21"/>
+          <Text TextId="I 22" Value="Input 22"/>
+          <Text TextId="I 23" Value="Input 23"/>
+          <Text TextId="I 24" Value="Input 24"/>
+          <Text TextId="I 25" Value="Input 25"/>
+          <Text TextId="I 26" Value="Input 26"/>
+          <Text TextId="I 27" Value="Input 27"/>
+          <Text TextId="I 28" Value="Input 28"/>
+          <Text TextId="I 29" Value="Input 29"/>
+          <Text TextId="I 30" Value="Input 30"/>
+          <Text TextId="I 31" Value="Input 31"/>
+          <Text TextId="I 32" Value="Input 32"/>
+          <Text TextId="I 33" Value="Input 33"/>
+          <Text TextId="I 34" Value="Input 34"/>
+          <Text TextId="I 35" Value="Input 35"/>
+          <Text TextId="I 36" Value="Input 36"/>
+          <Text TextId="I 37" Value="Input 37"/>
+          <Text TextId="I 38" Value="Input 38"/>
+          <Text TextId="I 39" Value="Input 39"/>
+          <Text TextId="I 40" Value="Input 40"/>
+          <Text TextId="I 41" Value="Input 41"/>
+          <Text TextId="I 42" Value="Input 42"/>
+          <Text TextId="I 43" Value="Input 43"/>
+          <Text TextId="I 44" Value="Input 44"/>
+          <Text TextId="I 45" Value="Input 45"/>
+          <Text TextId="I 46" Value="Input 46"/>
+          <Text TextId="I 47" Value="Input 47"/>
+          <Text TextId="I 48" Value="Input 48"/>
+          <Text TextId="I 49" Value="Input 49"/>
+          <Text TextId="I 50" Value="Input 50"/>
+          <Text TextId="I 51" Value="Input 51"/>
+          <Text TextId="I 52" Value="Input 52"/>
+          <Text TextId="I 53" Value="Input 53"/>
+          <Text TextId="I 54" Value="Input 54"/>
+          <Text TextId="I 55" Value="Input 55"/>
+          <Text TextId="I 56" Value="Input 56"/>
+          <Text TextId="I 57" Value="Input 57"/>
+          <Text TextId="I 58" Value="Input 58"/>
+          <Text TextId="I 59" Value="Input 59"/>
+          <Text TextId="I 60" Value="Input 60"/>
+          <Text TextId="I 61" Value="Input 61"/>
+          <Text TextId="I 62" Value="Input 62"/>
+          <Text TextId="I 63" Value="Input 63"/>
+		  <Text TextId="I 64" Value="Input 64"/>
+          <Text TextId="I 65" Value="Input 65"/>
+          <Text TextId="I 66" Value="Input 66"/>
+          <Text TextId="I 67" Value="Input 67"/>
+          <Text TextId="I 68" Value="Input 68"/>
+          <Text TextId="I 69" Value="Input 69"/>
+          <Text TextId="I 70" Value="Input 70"/>
+          <Text TextId="I 71" Value="Input 71"/>
+          <Text TextId="I 72" Value="Input 72"/>
+          <Text TextId="I 73" Value="Input 73"/>
+          <Text TextId="I 74" Value="Input 74"/>
+          <Text TextId="I 75" Value="Input 75"/>
+          <Text TextId="I 76" Value="Input 76"/>
+          <Text TextId="I 77" Value="Input 77"/>
+          <Text TextId="I 78" Value="Input 78"/>
+          <Text TextId="I 79" Value="Input 79"/>
+          <Text TextId="I 80" Value="Input 80"/>
+          <Text TextId="I 81" Value="Input 81"/>
+          <Text TextId="I 82" Value="Input 82"/>
+          <Text TextId="I 83" Value="Input 83"/>
+          <Text TextId="I 84" Value="Input 84"/>
+          <Text TextId="I 85" Value="Input 85"/>
+          <Text TextId="I 86" Value="Input 86"/>
+          <Text TextId="I 87" Value="Input 87"/>
+          <Text TextId="I 88" Value="Input 88"/>
+          <Text TextId="I 89" Value="Input 89"/>
+          <Text TextId="I 90" Value="Input 90"/>
+          <Text TextId="I 91" Value="Input 91"/>
+          <Text TextId="I 92" Value="Input 92"/>
+          <Text TextId="I 93" Value="Input 93"/>
+          <Text TextId="I 94" Value="Input 94"/>
+          <Text TextId="I 95" Value="Input 95"/>
+          <Text TextId="I 96" Value="Input 96"/>
+          <Text TextId="I 97" Value="Input 97"/>
+          <Text TextId="I 98" Value="Input 98"/>
+          <Text TextId="I 99" Value="Input 99"/>
+          <Text TextId="I 100" Value="Input 100"/>
+          <Text TextId="I 101" Value="Input 101"/>
+          <Text TextId="I 102" Value="Input 102"/>
+          <Text TextId="I 103" Value="Input 103"/>
+          <Text TextId="I 104" Value="Input 104"/>
+          <Text TextId="I 105" Value="Input 105"/>
+          <Text TextId="I 106" Value="Input 106"/>
+          <Text TextId="I 107" Value="Input 107"/>
+          <Text TextId="I 108" Value="Input 108"/>
+          <Text TextId="I 109" Value="Input 109"/>
+          <Text TextId="I 110" Value="Input 110"/>
+          <Text TextId="I 111" Value="Input 111"/>
+          <Text TextId="I 112" Value="Input 112"/>
+          <Text TextId="I 113" Value="Input 113"/>
+          <Text TextId="I 114" Value="Input 114"/>
+          <Text TextId="I 115" Value="Input 115"/>
+          <Text TextId="I 116" Value="Input 116"/>
+          <Text TextId="I 117" Value="Input 117"/>
+          <Text TextId="I 118" Value="Input 118"/>
+          <Text TextId="I 119" Value="Input 119"/>
+          <Text TextId="I 120" Value="Input 120"/>
+          <Text TextId="I 121" Value="Input 121"/>
+          <Text TextId="I 122" Value="Input 122"/>
+          <Text TextId="I 123" Value="Input 123"/>
+          <Text TextId="I 124" Value="Input 124"/>
+          <Text TextId="I 125" Value="Input 125"/>
+          <Text TextId="I 126" Value="Input 126"/>
+          <Text TextId="I 127" Value="Input 127"/>
+          <Text TextId="O 0" Value="Output 0"/>
+          <Text TextId="O 1" Value="Output 1"/>
+          <Text TextId="O 2" Value="Output 2"/>
+          <Text TextId="O 3" Value="Output 3"/>
+          <Text TextId="O 4" Value="Output 4"/>
+          <Text TextId="O 5" Value="Output 5"/>
+          <Text TextId="O 6" Value="Output 6"/>
+          <Text TextId="O 7" Value="Output 7"/>
+          <Text TextId="O 8" Value="Output 18"/>
+          <Text TextId="O 9" Value="Output 19"/>
+          <Text TextId="O 10" Value="Output 10"/>
+          <Text TextId="O 11" Value="Output 11"/>
+          <Text TextId="O 12" Value="Output 12"/>
+          <Text TextId="O 13" Value="Output 13"/>
+          <Text TextId="O 14" Value="Output 14"/>
+          <Text TextId="O 15" Value="Output 15"/>
+          <Text TextId="O 16" Value="Output 16"/>
+          <Text TextId="O 17" Value="Output 17"/>
+          <Text TextId="O 18" Value="Output 18"/>
+          <Text TextId="O 19" Value="Output 19"/>
+          <Text TextId="O 20" Value="Output 20"/>
+          <Text TextId="O 21" Value="Output 21"/>
+          <Text TextId="O 22" Value="Output 22"/>
+          <Text TextId="O 23" Value="Output 23"/>
+          <Text TextId="O 24" Value="Output 24"/>
+          <Text TextId="O 25" Value="Output 25"/>
+          <Text TextId="O 26" Value="Output 26"/>
+          <Text TextId="O 27" Value="Output 27"/>
+          <Text TextId="O 28" Value="Output 28"/>
+          <Text TextId="O 29" Value="Output 29"/>
+          <Text TextId="O 30" Value="Output 30"/>
+          <Text TextId="O 31" Value="Output 31"/>
+          <Text TextId="O 32" Value="Output 32"/>
+          <Text TextId="O 33" Value="Output 33"/>
+          <Text TextId="O 34" Value="Output 34"/>
+          <Text TextId="O 35" Value="Output 35"/>
+          <Text TextId="O 36" Value="Output 36"/>
+          <Text TextId="O 37" Value="Output 37"/>
+          <Text TextId="O 38" Value="Output 38"/>
+          <Text TextId="O 39" Value="Output 39"/>
+          <Text TextId="O 40" Value="Output 40"/>
+          <Text TextId="O 41" Value="Output 41"/>
+          <Text TextId="O 42" Value="Output 42"/>
+          <Text TextId="O 43" Value="Output 43"/>
+          <Text TextId="O 44" Value="Output 44"/>
+          <Text TextId="O 45" Value="Output 45"/>
+          <Text TextId="O 46" Value="Output 46"/>
+          <Text TextId="O 47" Value="Output 47"/>
+          <Text TextId="O 48" Value="Output 48"/>
+          <Text TextId="O 49" Value="Output 49"/>
+          <Text TextId="O 50" Value="Output 50"/>
+          <Text TextId="O 51" Value="Output 51"/>
+          <Text TextId="O 52" Value="Output 52"/>
+          <Text TextId="O 53" Value="Output 53"/>
+          <Text TextId="O 54" Value="Output 54"/>
+          <Text TextId="O 55" Value="Output 55"/>
+          <Text TextId="O 56" Value="Output 56"/>
+          <Text TextId="O 57" Value="Output 57"/>
+          <Text TextId="O 58" Value="Output 58"/>
+          <Text TextId="O 59" Value="Output 59"/>
+          <Text TextId="O 60" Value="Output 60"/>
+          <Text TextId="O 61" Value="Output 61"/>
+          <Text TextId="O 62" Value="Output 62"/>
+          <Text TextId="O 63" Value="Output 63"/>
+		  <Text TextId="O 64" Value="Output 64"/>
+          <Text TextId="O 65" Value="Output 65"/>
+          <Text TextId="O 66" Value="Output 66"/>
+          <Text TextId="O 67" Value="Output 67"/>
+          <Text TextId="O 68" Value="Output 68"/>
+          <Text TextId="O 69" Value="Output 69"/>
+          <Text TextId="O 70" Value="Output 70"/>
+          <Text TextId="O 71" Value="Output 71"/>
+          <Text TextId="O 72" Value="Output 72"/>
+          <Text TextId="O 73" Value="Output 73"/>
+          <Text TextId="O 74" Value="Output 74"/>
+          <Text TextId="O 75" Value="Output 75"/>
+          <Text TextId="O 76" Value="Output 76"/>
+          <Text TextId="O 77" Value="Output 77"/>
+          <Text TextId="O 78" Value="Output 78"/>
+          <Text TextId="O 79" Value="Output 79"/>
+          <Text TextId="O 80" Value="Output 80"/>
+          <Text TextId="O 81" Value="Output 81"/>
+          <Text TextId="O 82" Value="Output 82"/>
+          <Text TextId="O 83" Value="Output 83"/>
+          <Text TextId="O 84" Value="Output 84"/>
+          <Text TextId="O 85" Value="Output 85"/>
+          <Text TextId="O 86" Value="Output 86"/>
+          <Text TextId="O 87" Value="Output 87"/>
+          <Text TextId="O 88" Value="Output 88"/>
+          <Text TextId="O 89" Value="Output 89"/>
+          <Text TextId="O 90" Value="Output 90"/>
+          <Text TextId="O 91" Value="Output 91"/>
+          <Text TextId="O 92" Value="Output 92"/>
+          <Text TextId="O 93" Value="Output 93"/>
+          <Text TextId="O 94" Value="Output 94"/>
+          <Text TextId="O 95" Value="Output 95"/>
+          <Text TextId="O 96" Value="Output 96"/>
+          <Text TextId="O 97" Value="Output 97"/>
+          <Text TextId="O 98" Value="Output 98"/>
+          <Text TextId="O 99" Value="Output 99"/>
+          <Text TextId="O 100" Value="Output 100"/>
+          <Text TextId="O 101" Value="Output 101"/>
+          <Text TextId="O 102" Value="Output 102"/>
+          <Text TextId="O 103" Value="Output 103"/>
+          <Text TextId="O 104" Value="Output 104"/>
+          <Text TextId="O 105" Value="Output 105"/>
+          <Text TextId="O 106" Value="Output 106"/>
+          <Text TextId="O 107" Value="Output 107"/>
+          <Text TextId="O 108" Value="Output 108"/>
+          <Text TextId="O 109" Value="Output 109"/>
+          <Text TextId="O 110" Value="Output 110"/>
+          <Text TextId="O 111" Value="Output 111"/>
+          <Text TextId="O 112" Value="Output 112"/>
+          <Text TextId="O 113" Value="Output 113"/>
+          <Text TextId="O 114" Value="Output 114"/>
+          <Text TextId="O 115" Value="Output 115"/>
+          <Text TextId="O 116" Value="Output 116"/>
+          <Text TextId="O 117" Value="Output 117"/>
+          <Text TextId="O 118" Value="Output 118"/>
+          <Text TextId="O 119" Value="Output 119"/>
+          <Text TextId="O 120" Value="Output 120"/>
+          <Text TextId="O 121" Value="Output 121"/>
+          <Text TextId="O 122" Value="Output 122"/>
+          <Text TextId="O 123" Value="Output 123"/>
+          <Text TextId="O 124" Value="Output 124"/>
+          <Text TextId="O 125" Value="Output 125"/>
+          <Text TextId="O 126" Value="Output 126"/>
+          <Text TextId="O 127" Value="Output 127"/>
+        </PrimaryLanguage>
+        <Language xml:lang="de">
+          <Text TextId="TOK_Subslot_8000" Value="X1" /> 
+          <Text TextId="TOK_Subslot_8001" Value="X1 P1" /> 
+          <Text TextId="IRC5 Robot" Value="IRC5 Robot controller internal PROFINET IO device." />
+          <Text TextId="PNIO-DEVICE" Value="IRC5 PNIO-Device" />
+          <Text TextId="Interface1" Value="Interface1"/>
+          <Text TextId="Port1" Value="Port1"/>
+		  <Text TextId="DI 128 bytes" Value="DI 128 bytes"/>
+		  <Text TextId="DO 128 bytes" Value="DO 128 bytes"/>
+          <Text TextId="DI 64 bytes" Value="DI 64 bytes"/>
+          <Text TextId="DO 64 bytes" Value="DO 64 bytes"/>
+          <Text TextId="DI 32 bytes" Value="DI 32 bytes"/>
+          <Text TextId="DO 32 bytes" Value="DO 32 bytes"/>
+          <Text TextId="DI 16 bytes" Value="DI 16 bytes"/>
+          <Text TextId="DO 16 bytes" Value="DO 16 bytes"/>
+          <Text TextId="DI 8 bytes" Value="DI 8 bytes"/>
+          <Text TextId="DO 8 bytes" Value="DO 8 bytes"/>
+          <Text TextId="I 0" Value="Eingang 0"/>
+          <Text TextId="I 1" Value="Eingang 1"/>
+          <Text TextId="I 2" Value="Eingang 2"/>
+          <Text TextId="I 3" Value="Eingang 3"/>
+          <Text TextId="I 4" Value="Eingang 4"/>
+          <Text TextId="I 5" Value="Eingang 5"/>
+          <Text TextId="I 6" Value="Eingang 6"/>
+          <Text TextId="I 7" Value="Eingang 7"/>
+          <Text TextId="I 8" Value="Eingang 18"/>
+          <Text TextId="I 9" Value="Eingang 19"/>
+          <Text TextId="I 10" Value="Eingang 10"/>
+          <Text TextId="I 11" Value="Eingang 11"/>
+          <Text TextId="I 12" Value="Eingang 12"/>
+          <Text TextId="I 13" Value="Eingang 13"/>
+          <Text TextId="I 14" Value="Eingang 14"/>
+          <Text TextId="I 15" Value="Eingang 15"/>
+          <Text TextId="I 16" Value="Eingang 16"/>
+          <Text TextId="I 17" Value="Eingang 17"/>
+          <Text TextId="I 18" Value="Eingang 18"/>
+          <Text TextId="I 19" Value="Eingang 19"/>
+          <Text TextId="I 20" Value="Eingang 20"/>
+          <Text TextId="I 21" Value="Eingang 21"/>
+          <Text TextId="I 22" Value="Eingang 22"/>
+          <Text TextId="I 23" Value="Eingang 23"/>
+          <Text TextId="I 24" Value="Eingang 24"/>
+          <Text TextId="I 25" Value="Eingang 25"/>
+          <Text TextId="I 26" Value="Eingang 26"/>
+          <Text TextId="I 27" Value="Eingang 27"/>
+          <Text TextId="I 28" Value="Eingang 28"/>
+          <Text TextId="I 29" Value="Eingang 29"/>
+          <Text TextId="I 30" Value="Eingang 30"/>
+          <Text TextId="I 31" Value="Eingang 31"/>
+          <Text TextId="I 32" Value="Eingang 32"/>
+          <Text TextId="I 33" Value="Eingang 33"/>
+          <Text TextId="I 34" Value="Eingang 34"/>
+          <Text TextId="I 35" Value="Eingang 35"/>
+          <Text TextId="I 36" Value="Eingang 36"/>
+          <Text TextId="I 37" Value="Eingang 37"/>
+          <Text TextId="I 38" Value="Eingang 38"/>
+          <Text TextId="I 39" Value="Eingang 39"/>
+          <Text TextId="I 40" Value="Eingang 40"/>
+          <Text TextId="I 41" Value="Eingang 41"/>
+          <Text TextId="I 42" Value="Eingang 42"/>
+          <Text TextId="I 43" Value="Eingang 43"/>
+          <Text TextId="I 44" Value="Eingang 44"/>
+          <Text TextId="I 45" Value="Eingang 45"/>
+          <Text TextId="I 46" Value="Eingang 46"/>
+          <Text TextId="I 47" Value="Eingang 47"/>
+          <Text TextId="I 48" Value="Eingang 48"/>
+          <Text TextId="I 49" Value="Eingang 49"/>
+          <Text TextId="I 50" Value="Eingang 50"/>
+          <Text TextId="I 51" Value="Eingang 51"/>
+          <Text TextId="I 52" Value="Eingang 52"/>
+          <Text TextId="I 53" Value="Eingang 53"/>
+          <Text TextId="I 54" Value="Eingang 54"/>
+          <Text TextId="I 55" Value="Eingang 55"/>
+          <Text TextId="I 56" Value="Eingang 56"/>
+          <Text TextId="I 57" Value="Eingang 57"/>
+          <Text TextId="I 58" Value="Eingang 58"/>
+          <Text TextId="I 59" Value="Eingang 59"/>
+          <Text TextId="I 60" Value="Eingang 60"/>
+          <Text TextId="I 61" Value="Eingang 61"/>
+          <Text TextId="I 62" Value="Eingang 62"/>
+          <Text TextId="I 63" Value="Eingang 63"/>
+		  <Text TextId="I 64" Value="Eingang 64"/>
+          <Text TextId="I 65" Value="Eingang 65"/>
+          <Text TextId="I 66" Value="Eingang 66"/>
+          <Text TextId="I 67" Value="Eingang 67"/>
+          <Text TextId="I 68" Value="Eingang 68"/>
+          <Text TextId="I 69" Value="Eingang 69"/>
+          <Text TextId="I 70" Value="Eingang 70"/>
+          <Text TextId="I 71" Value="Eingang 71"/>
+          <Text TextId="I 72" Value="Eingang 72"/>
+          <Text TextId="I 73" Value="Eingang 73"/>
+          <Text TextId="I 74" Value="Eingang 74"/>
+          <Text TextId="I 75" Value="Eingang 75"/>
+          <Text TextId="I 76" Value="Eingang 76"/>
+          <Text TextId="I 77" Value="Eingang 77"/>
+          <Text TextId="I 78" Value="Eingang 78"/>
+          <Text TextId="I 79" Value="Eingang 79"/>
+          <Text TextId="I 80" Value="Eingang 80"/>
+          <Text TextId="I 81" Value="Eingang 81"/>
+          <Text TextId="I 82" Value="Eingang 82"/>
+          <Text TextId="I 83" Value="Eingang 83"/>
+          <Text TextId="I 84" Value="Eingang 84"/>
+          <Text TextId="I 85" Value="Eingang 85"/>
+          <Text TextId="I 86" Value="Eingang 86"/>
+          <Text TextId="I 87" Value="Eingang 87"/>
+          <Text TextId="I 88" Value="Eingang 88"/>
+          <Text TextId="I 89" Value="Eingang 89"/>
+          <Text TextId="I 90" Value="Eingang 90"/>
+          <Text TextId="I 91" Value="Eingang 91"/>
+          <Text TextId="I 92" Value="Eingang 92"/>
+          <Text TextId="I 93" Value="Eingang 93"/>
+          <Text TextId="I 94" Value="Eingang 94"/>
+          <Text TextId="I 95" Value="Eingang 95"/>
+          <Text TextId="I 96" Value="Eingang 96"/>
+          <Text TextId="I 97" Value="Eingang 97"/>
+          <Text TextId="I 98" Value="Eingang 98"/>
+          <Text TextId="I 99" Value="Eingang 99"/>
+          <Text TextId="I 100" Value="Eingang 100"/>
+          <Text TextId="I 101" Value="Eingang 101"/>
+          <Text TextId="I 102" Value="Eingang 102"/>
+          <Text TextId="I 103" Value="Eingang 103"/>
+          <Text TextId="I 104" Value="Eingang 104"/>
+          <Text TextId="I 105" Value="Eingang 105"/>
+          <Text TextId="I 106" Value="Eingang 106"/>
+          <Text TextId="I 107" Value="Eingang 107"/>
+          <Text TextId="I 108" Value="Eingang 108"/>
+          <Text TextId="I 109" Value="Eingang 109"/>
+          <Text TextId="I 110" Value="Eingang 110"/>
+          <Text TextId="I 111" Value="Eingang 111"/>
+          <Text TextId="I 112" Value="Eingang 112"/>
+          <Text TextId="I 113" Value="Eingang 113"/>
+          <Text TextId="I 114" Value="Eingang 114"/>
+          <Text TextId="I 115" Value="Eingang 115"/>
+          <Text TextId="I 116" Value="Eingang 116"/>
+          <Text TextId="I 117" Value="Eingang 117"/>
+          <Text TextId="I 118" Value="Eingang 118"/>
+          <Text TextId="I 119" Value="Eingang 119"/>
+          <Text TextId="I 120" Value="Eingang 120"/>
+          <Text TextId="I 121" Value="Eingang 121"/>
+          <Text TextId="I 122" Value="Eingang 122"/>
+          <Text TextId="I 123" Value="Eingang 123"/>
+          <Text TextId="I 124" Value="Eingang 124"/>
+          <Text TextId="I 125" Value="Eingang 125"/>
+          <Text TextId="I 126" Value="Eingang 126"/>
+          <Text TextId="I 127" Value="Eingang 127"/>
+          <Text TextId="O 0" Value="Ausgang 0"/>
+          <Text TextId="O 1" Value="Ausgang 1"/>
+          <Text TextId="O 2" Value="Ausgang 2"/>
+          <Text TextId="O 3" Value="Ausgang 3"/>
+          <Text TextId="O 4" Value="Ausgang 4"/>
+          <Text TextId="O 5" Value="Ausgang 5"/>
+          <Text TextId="O 6" Value="Ausgang 6"/>
+          <Text TextId="O 7" Value="Ausgang 7"/>
+          <Text TextId="O 8" Value="Ausgang 18"/>
+          <Text TextId="O 9" Value="Ausgang 19"/>
+          <Text TextId="O 10" Value="Ausgang 10"/>
+          <Text TextId="O 11" Value="Ausgang 11"/>
+          <Text TextId="O 12" Value="Ausgang 12"/>
+          <Text TextId="O 13" Value="Ausgang 13"/>
+          <Text TextId="O 14" Value="Ausgang 14"/>
+          <Text TextId="O 15" Value="Ausgang 15"/>
+          <Text TextId="O 16" Value="Ausgang 16"/>
+          <Text TextId="O 17" Value="Ausgang 17"/>
+          <Text TextId="O 18" Value="Ausgang 18"/>
+          <Text TextId="O 19" Value="Ausgang 19"/>
+          <Text TextId="O 20" Value="Ausgang 20"/>
+          <Text TextId="O 21" Value="Ausgang 21"/>
+          <Text TextId="O 22" Value="Ausgang 22"/>
+          <Text TextId="O 23" Value="Ausgang 23"/>
+          <Text TextId="O 24" Value="Ausgang 24"/>
+          <Text TextId="O 25" Value="Ausgang 25"/>
+          <Text TextId="O 26" Value="Ausgang 26"/>
+          <Text TextId="O 27" Value="Ausgang 27"/>
+          <Text TextId="O 28" Value="Ausgang 28"/>
+          <Text TextId="O 29" Value="Ausgang 29"/>
+          <Text TextId="O 30" Value="Ausgang 30"/>
+          <Text TextId="O 31" Value="Ausgang 31"/>
+          <Text TextId="O 32" Value="Ausgang 32"/>
+          <Text TextId="O 33" Value="Ausgang 33"/>
+          <Text TextId="O 34" Value="Ausgang 34"/>
+          <Text TextId="O 35" Value="Ausgang 35"/>
+          <Text TextId="O 36" Value="Ausgang 36"/>
+          <Text TextId="O 37" Value="Ausgang 37"/>
+          <Text TextId="O 38" Value="Ausgang 38"/>
+          <Text TextId="O 39" Value="Ausgang 39"/>
+          <Text TextId="O 40" Value="Ausgang 40"/>
+          <Text TextId="O 41" Value="Ausgang 41"/>
+          <Text TextId="O 42" Value="Ausgang 42"/>
+          <Text TextId="O 43" Value="Ausgang 43"/>
+          <Text TextId="O 44" Value="Ausgang 44"/>
+          <Text TextId="O 45" Value="Ausgang 45"/>
+          <Text TextId="O 46" Value="Ausgang 46"/>
+          <Text TextId="O 47" Value="Ausgang 47"/>
+          <Text TextId="O 48" Value="Ausgang 48"/>
+          <Text TextId="O 49" Value="Ausgang 49"/>
+          <Text TextId="O 50" Value="Ausgang 50"/>
+          <Text TextId="O 51" Value="Ausgang 51"/>
+          <Text TextId="O 52" Value="Ausgang 52"/>
+          <Text TextId="O 53" Value="Ausgang 53"/>
+          <Text TextId="O 54" Value="Ausgang 54"/>
+          <Text TextId="O 55" Value="Ausgang 55"/>
+          <Text TextId="O 56" Value="Ausgang 56"/>
+          <Text TextId="O 57" Value="Ausgang 57"/>
+          <Text TextId="O 58" Value="Ausgang 58"/>
+          <Text TextId="O 59" Value="Ausgang 59"/>
+          <Text TextId="O 60" Value="Ausgang 60"/>
+          <Text TextId="O 61" Value="Ausgang 61"/>
+          <Text TextId="O 62" Value="Ausgang 62"/>
+          <Text TextId="O 63" Value="Ausgang 63"/>
+		  <Text TextId="O 64" Value="Ausgang 64"/>
+          <Text TextId="O 65" Value="Ausgang 65"/>
+          <Text TextId="O 66" Value="Ausgang 66"/>
+          <Text TextId="O 67" Value="Ausgang 67"/>
+          <Text TextId="O 68" Value="Ausgang 68"/>
+          <Text TextId="O 69" Value="Ausgang 69"/>
+          <Text TextId="O 70" Value="Ausgang 70"/>
+          <Text TextId="O 71" Value="Ausgang 71"/>
+          <Text TextId="O 72" Value="Ausgang 72"/>
+          <Text TextId="O 73" Value="Ausgang 73"/>
+          <Text TextId="O 74" Value="Ausgang 74"/>
+          <Text TextId="O 75" Value="Ausgang 75"/>
+          <Text TextId="O 76" Value="Ausgang 76"/>
+          <Text TextId="O 77" Value="Ausgang 77"/>
+          <Text TextId="O 78" Value="Ausgang 78"/>
+          <Text TextId="O 79" Value="Ausgang 79"/>
+          <Text TextId="O 80" Value="Ausgang 80"/>
+          <Text TextId="O 81" Value="Ausgang 81"/>
+          <Text TextId="O 82" Value="Ausgang 82"/>
+          <Text TextId="O 83" Value="Ausgang 83"/>
+          <Text TextId="O 84" Value="Ausgang 84"/>
+          <Text TextId="O 85" Value="Ausgang 85"/>
+          <Text TextId="O 86" Value="Ausgang 86"/>
+          <Text TextId="O 87" Value="Ausgang 87"/>
+          <Text TextId="O 88" Value="Ausgang 88"/>
+          <Text TextId="O 89" Value="Ausgang 89"/>
+          <Text TextId="O 90" Value="Ausgang 90"/>
+          <Text TextId="O 91" Value="Ausgang 91"/>
+          <Text TextId="O 92" Value="Ausgang 92"/>
+          <Text TextId="O 93" Value="Ausgang 93"/>
+          <Text TextId="O 94" Value="Ausgang 94"/>
+          <Text TextId="O 95" Value="Ausgang 95"/>
+          <Text TextId="O 96" Value="Ausgang 96"/>
+          <Text TextId="O 97" Value="Ausgang 97"/>
+          <Text TextId="O 98" Value="Ausgang 98"/>
+          <Text TextId="O 99" Value="Ausgang 99"/>
+          <Text TextId="O 100" Value="Ausgang 100"/>
+          <Text TextId="O 101" Value="Ausgang 101"/>
+          <Text TextId="O 102" Value="Ausgang 102"/>
+          <Text TextId="O 103" Value="Ausgang 103"/>
+          <Text TextId="O 104" Value="Ausgang 104"/>
+          <Text TextId="O 105" Value="Ausgang 105"/>
+          <Text TextId="O 106" Value="Ausgang 106"/>
+          <Text TextId="O 107" Value="Ausgang 107"/>
+          <Text TextId="O 108" Value="Ausgang 108"/>
+          <Text TextId="O 109" Value="Ausgang 109"/>
+          <Text TextId="O 110" Value="Ausgang 110"/>
+          <Text TextId="O 111" Value="Ausgang 111"/>
+          <Text TextId="O 112" Value="Ausgang 112"/>
+          <Text TextId="O 113" Value="Ausgang 113"/>
+          <Text TextId="O 114" Value="Ausgang 114"/>
+          <Text TextId="O 115" Value="Ausgang 115"/>
+          <Text TextId="O 116" Value="Ausgang 116"/>
+          <Text TextId="O 117" Value="Ausgang 117"/>
+          <Text TextId="O 118" Value="Ausgang 118"/>
+          <Text TextId="O 119" Value="Ausgang 119"/>
+          <Text TextId="O 120" Value="Ausgang 120"/>
+          <Text TextId="O 121" Value="Ausgang 121"/>
+          <Text TextId="O 122" Value="Ausgang 122"/>
+          <Text TextId="O 123" Value="Ausgang 123"/>
+          <Text TextId="O 124" Value="Ausgang 124"/>
+          <Text TextId="O 125" Value="Ausgang 125"/>
+          <Text TextId="O 126" Value="Ausgang 126"/>
+          <Text TextId="O 127" Value="Ausgang 127"/>          
+        </Language>
+      </ExternalTextList>
+    </ApplicationProcess>
+  </ProfileBody>
+</ISO15745Profile>

@@ -1,71 +1,113 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>ABB Robots - GSDML Downloader</title>
-        <link rel="icon" href="assets/logo/pro.png" />
-        <link rel="stylesheet" href="assets/style.css">
-        <meta charset="UTF-8">
-    </head>
 
-    <body>
-        <header>
-            <a class="logo" href="" rel="home" title="ABB Robots - GSDML Downloader" target="_self">
-                <img src="assets/logo/pro.png" alt="ABB Logo" style="width: 50px; height: 50px; display: inline-block;">
+<head>
+    <title>ABB Robots - GSDML Downloader</title>
+    <link rel="icon" href="assets/logo/pro.png" />
+    <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="" rel="home" title="ABB Robots - GSDML Downloader" target="_self">
+            <img src="assets/logo/pro.png" alt="ABB Logo" style="width: 50px; height: 50px; display: inline-block;">
         </a>
-            <div class="tab"><button class="tablinks" onclick="openGSDMLtab(event, 'In RobotWare folder')" id="defaultOpen">In RobotWare folder</button><button class="tablinks" onclick="openGSDMLtab(event, 'Anybus - Fieldbus adapter')">Anybus - Fieldbus adapter</button><button class="tablinks" onclick="openGSDMLtab(event, 'Robots Device')">Robots Device</button></div>
-        </header>
-        <div id="container">
-            <div id="In RobotWare folder" class="tabcontent">
-                <div id="chart">
-                    <h1>GSDML for ABB Robots Profinet Communication</h1>
-                    <div>
-                        If you have <a href="https://new.abb.com/products/robotics/robotstudio/downloads">RobotStudio</a> and the Robotware of your robot installed, you already have the GSDML files on your computer. <br>
-                        Depending of the Robotware version, the path where the files are stored will be different:
-                    </div>
-                    <h2>RobotWare 5:</h2>
-                    <div class="path">C:\Program Files (x86)\ABB Industrial IT\Robotics IT\MediaPool\RobotWare_XXX\utility\service</div>
-                    <h2>RobotWare 6:</h2>
-                    <div class="path">C:\ProgramData\ABB\DistributionPackages\ABB.RobotWare-XXX\RobotPackages\RobotWare_RPK_XXX\utility\service</div>
-                    <h2>RobotWare 7:</h2>
-                    <div class="path">C:\ProgramData\ABB\DistributionPackages\ABB.RobotWare-XXX\RobotPackages\RobotControl_XXX\utility\service\GSDML</div>
-                    <h1>Download links</h1>
-                    <div>If you don't have Robotstudio or the correct Robotware version, you can switch tab at the top of this page to find the GSDML you are looking for depending of the robot's option:
-                        <h3>Anybus - Fieldbus adapter</h3>
-                        <ul>
-                            <li>840-3 PROFINET Anybus Device</li>
-                        </ul>
-                        <h3>Robots Device</h3>
-                        <ul>
-                            <li>888-2 PROFINET Controller/Device (IRC5)</li>
-                            <li>888-3 PROFINET Device (IRC5)</li>
-                            <li>3020-2 PROFINET Device (Omnicore)</li>
-                        </ul>
-                    </div>
+        <div class="tab"><button class="tablinks" onclick="openGSDMLtab(event, 'In RobotWare folder')"
+                id="defaultOpen">In RobotWare folder</button><button class="tablinks"
+                onclick="openGSDMLtab(event, 'Anybus - Fieldbus adapter')">Anybus - Fieldbus adapter</button><button
+                class="tablinks" onclick="openGSDMLtab(event, 'Robots Device')">Robots Device</button></div>
+    </header>
+    <div id="container">
+        <div id="In RobotWare folder" class="tabcontent">
+            <div id="chart">
+                <h1>GSDML for ABB Robots Profinet Communication</h1>
+                <div>
+                    If you have <a href="https://new.abb.com/products/robotics/robotstudio/downloads">RobotStudio</a>
+                    and the Robotware of your robot installed, you already have the GSDML files on your computer. <br>
+                    Depending of the Robotware version, the path where the files are stored will be different:
+                </div>
+                <h2>RobotWare 5:</h2>
+                <div class="path">C:\Program Files (x86)\ABB Industrial IT\Robotics
+                    IT\MediaPool\RobotWare_XXX\utility\service</div>
+                <h2>RobotWare 6:</h2>
+                <div class="path">
+                    C:\ProgramData\ABB\DistributionPackages\ABB.RobotWare-XXX\RobotPackages\RobotWare_RPK_XXX\utility\service
+                </div>
+                <h2>RobotWare 7:</h2>
+                <div class="path">
+                    C:\ProgramData\ABB\DistributionPackages\ABB.RobotWare-XXX\RobotPackages\RobotControl_XXX\utility\service\GSDML
+                </div>
+                <h1>Download links</h1>
+                <div>If you don't have Robotstudio or the correct Robotware version, you can switch tab at the top of
+                    this page to find the GSDML you are looking for depending of the robot's option:
+                    <h3>Anybus - Fieldbus adapter</h3>
+                    <ul>
+                        <li>840-3 PROFINET Anybus Device</li>
+                    </ul>
+                    <h3>Robots Device</h3>
+                    <ul>
+                        <li>888-2 PROFINET Controller/Device (IRC5)</li>
+                        <li>888-3 PROFINET Device (IRC5)</li>
+                        <li>3020-2 PROFINET Device (Omnicore)</li>
+                    </ul>
                 </div>
             </div>
-            <div id="Anybus - Fieldbus adapter" class="tabcontent">
-                <h1>Download links</h1>
-                <div>Right click -> Save link as...</div>
-                <ul>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Anybus%20-%20Fieldbus%20adapter/GSDML-V2.0-PNET-FA-20100510.xml">GSDML-V2.0-PNET-FA-20100510.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Anybus%20-%20Fieldbus%20adapter/GSDML-V2.34-PNET-Anybus-20180124.xml">GSDML-V2.34-PNET-Anybus-20180124.xml</a></li>
-                </ul>
-            </div>
-            <div id="Robots Device" class="tabcontent">
-                <h1>Download links</h1>
-                <div>Right click -> Save link as...</div>
-                <ul>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.1-ABB-Robotics-PNSW-Device-20120209.xml">GSDML-V2.1-ABB-Robotics-PNSW-Device-20120209.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.1-ABB-Robotics-PNSW-Device-20150427.xml">GSDML-V2.1-ABB-Robotics-PNSW-Device-20150427.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.2-ABB-Robotics-PNSW-Device-20160528.xml">GSDML-V2.2-ABB-Robotics-PNSW-Device-20160528.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.33-ABB Robotics-Robot Device-20171011.xml">GSDML-V2.33-ABB Robotics-Robot Device-20171011.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.33-ABB-Robotics-Robot-Device-20180404.xml">GSDML-V2.33-ABB-Robotics-Robot-Device-20180404.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.33-ABB-Robotics-Robot-Device-20180814.xml">GSDML-V2.33-ABB-Robotics-Robot-Device-20180814.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.35-ABB-Robotics-OmniCore-20200904.xml">GSDML-V2.35-ABB-Robotics-OmniCore-20200904.xml</a></li>
-                    <li><a href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.35-ABB-Robotics-OmniCore-20211229.xml">GSDML-V2.35-ABB-Robotics-OmniCore-20211229.xml</a></li>
-                </ul>
-            </div>
-        <div id="disclaimer">This website is not affiliated with any company or organization. Information provided is for informational purposes only</div>
+        </div>
+        <div id="Anybus - Fieldbus adapter" class="tabcontent">
+            <h1>Download links</h1>
+            <div>Right click -> Save link as...</div>
+            <ul>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Anybus%20-%20Fieldbus%20adapter/GSDML-V2.0-PNET-FA-20100510.xml">GSDML-V2.0-PNET-FA-20100510.xml</a>
+                </li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Anybus%20-%20Fieldbus%20adapter/GSDML-V2.34-PNET-Anybus-20180124.xml">GSDML-V2.34-PNET-Anybus-20180124.xml</a>
+                </li>
+            </ul>
+        </div>
+        <div id="Robots Device" class="tabcontent">
+            <h1>Download links</h1>
+            <div>Right click -> Save link as...</div>
+            <ul>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.1-ABB-Robotics-PNSW-Device-20120209.xml">GSDML-V2.1-ABB-Robotics-PNSW-Device-20120209.xml</a>
+                </li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.1-ABB-Robotics-PNSW-Device-20150427.xml">GSDML-V2.1-ABB-Robotics-PNSW-Device-20150427.xml</a>
+                </li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.2-ABB-Robotics-PNSW-Device-20160528.xml">GSDML-V2.2-ABB-Robotics-PNSW-Device-20160528.xml</a>
+                </li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.33-ABB Robotics-Robot Device-20171011.xml">GSDML-V2.33-ABB
+                        Robotics-Robot Device-20171011.xml</a></li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.33-ABB-Robotics-Robot-Device-20180404.xml">GSDML-V2.33-ABB-Robotics-Robot-Device-20180404.xml</a>
+                </li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.33-ABB-Robotics-Robot-Device-20180814.xml">GSDML-V2.33-ABB-Robotics-Robot-Device-20180814.xml</a>
+                </li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.35-ABB-Robotics-OmniCore-20200904.xml">GSDML-V2.35-ABB-Robotics-OmniCore-20200904.xml</a>
+                </li>
+                <li><a
+                        href="https://github.com/FLo-ABB/GSDML_ABB_ROBOTS/raw/main/Robots%20Device/GSDML-V2.35-ABB-Robotics-OmniCore-20211229.xml">GSDML-V2.35-ABB-Robotics-OmniCore-20211229.xml</a>
+                </li>
+            </ul>
+        </div>
+        <div id="disclaimer">This website is not affiliated with any company or organization. Information provided is
+            for informational purposes only</div>
         <script type="text/javascript" src="assets/script.js"></script>
-    </body>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRQ2RS1C7P"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-JRQ2RS1C7P');
+        </script>
+</body>
+
 </html>
